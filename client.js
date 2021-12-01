@@ -10,7 +10,7 @@ const connect = function () {
       console.log('Server says:', data)
     }); 
 
-    conn.on('connect', (client) => {
+    conn.on('connect', () => {
         console.log('Successfully connected to game server \n')
         conn.write('Name: LNW')
 
@@ -25,4 +25,4 @@ const connect = function () {
     return conn;
   };
 
-  module.exports = connect,  'Name: SNK' ;
+  module.exports = connect;
